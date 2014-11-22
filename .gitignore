@@ -98,3 +98,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Pycharm
+.idea
+.vagrant

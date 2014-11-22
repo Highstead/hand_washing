@@ -1,0 +1,25 @@
+<html>
+<title>Test</title>
+<script src="{{ STATIC_URL }}scripts/jquery-2.1.1.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css" />
+<script type="application/javascript">
+    $(function() {
+         $('#bathroomUseForm').on('submit', function(e){
+             e.preventDefault();
+             $.ajax({
+                 url: 'wash/',
+                 method: 'POST',
+                 success: function(data){ $('#target').html(data) }
+             });
+        });
+    });
+
+</script>
+<body>
+   Weee Home url is : {{ STATIC_URL }}
+    <form id="bathroomUseForm" action="#" method="get">
+     <input type="text" value="8" name="mytextbox" size="1"/>
+     <input type="submit" class="btn" value="Click" name="mybtn">
+    </form>
+</body>
+</html>
